@@ -1,0 +1,77 @@
+{
+  "name": "@theojs/Lumen",
+  "version": "6.4.4",
+  "description": "专为 VitePress 打造的主题美化与 Vue 扩展组件库",
+  "keywords": [
+    "css",
+    "vue",
+    "vite",
+    "typescript",
+    "vitepress",
+    "vitepress-plugin",
+    "vitepress-theme",
+    "vitepress-ui",
+    "comment",
+    "waline",
+    "iconify",
+    "iconify-icon",
+    "tools",
+    "theojs",
+    "Lumen",
+    "vitepress-enhance"
+  ],
+  "homepage": "https://Lumen.theojs.cn/",
+  "bugs": {
+    "url": "https://github.com/s-theo/Lumen/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s-theo/Lumen.git",
+    "directory": "src"
+  },
+  "license": "MIT",
+  "author": "Theo",
+  "type": "module",
+  "exports": {
+    ".": "./types/index.ts",
+    "./style": "./style/all.css",
+    "./icon": "./style/icon.css",
+    "./button": "./style/button.css",
+    "./colors": "./style/colors.css",
+    "./doc": "./style/doc.css",
+    "./doc-blocks": "./style/doc-blocks.css",
+    "./home": "./style/home.css",
+    "./pic": "./style/picture.css",
+    "./badge": "./style/badge.css",
+    "./components-var": "./style/components-var.css",
+    "./package.json": "./package.json"
+  },
+  "main": "./types/index.ts",
+  "module": "./types/index.ts",
+  "types": "./types/index.ts",
+  "style": "./style/all.css",
+  "files": [
+    "style/",
+    "types/",
+    "components/",
+    "composables/",
+    "tsconfig.json",
+    "readme.md",
+    "License"
+  ],
+  "scripts": {
+    "release": "bumpp && pnpm publish --registry=https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "@iconify/vue": "^5.0.0",
+    "@waline/client": "^3.6.0",
+    "iconify-icon": "^3.0.0",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "bumpp": "^10.2.3",
+    "vitepress": "catalog:",
+    "vue": "catalog:"
+  },
+  "packageManager": "pnpm@10.15.0"
+}

@@ -1,0 +1,6 @@
+user-agent: *
+
+disallow: /assets/*.js$
+disallow: /assets/*.css$
+
+sitemap: https://Lumen.theojs.cn/sitemap.xml
