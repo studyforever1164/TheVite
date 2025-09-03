@@ -1,6 +1,6 @@
 ---
 title: Configure Theme
-description: Learn how to configure and customize the @theojs/Lumen VitePress theme. This guide includes theme CSS import (full or partial), Iconify icon support configuration, CSS variable override methods, and demonstrates built-in style examples such as containers, badges and light/dark mode images.
+description: Learn how to configure and customize the @theojs/TheVite VitePress theme. This guide includes theme CSS import (full or partial), Iconify icon support configuration, CSS variable override methods, and demonstrates built-in style examples such as containers, badges and light/dark mode images.
 ---
 
 # Configure Theme
@@ -11,27 +11,27 @@ description: Learn how to configure and customize the @theojs/Lumen VitePress th
 
 ```ts [Full Import]
 // .vitepress/theme/index.ts
-import '@theojs/Lumen/style'
+import '@theojs/TheVite/style'
 ```
 
 ```ts [On-demand Import]
 // .vitepress/theme/index.ts
 /* Badge styles */
-import '@theojs/Lumen/badge'
+import '@theojs/TheVite/badge'
 /* Homepage buttons */
-import '@theojs/Lumen/button'
+import '@theojs/TheVite/button'
 /* Theme colors */
-import '@theojs/Lumen/colors'
+import '@theojs/TheVite/colors'
 /* Document base styles */
-import '@theojs/Lumen/doc'
+import '@theojs/TheVite/doc'
 /* Container styles (alerts, tip blocks, etc.) */
-import '@theojs/Lumen/doc-blocks'
+import '@theojs/TheVite/doc-blocks'
 /* Homepage styles */
-import '@theojs/Lumen/home'
+import '@theojs/TheVite/home'
 /* Icon styles */
-import '@theojs/Lumen/icon'
+import '@theojs/TheVite/icon'
 /* Image styles */
-import '@theojs/Lumen/pic'
+import '@theojs/TheVite/pic'
 ```
 
 :::
@@ -50,23 +50,23 @@ import '@theojs/Lumen/pic'
 <iconify-icon icon="line-md:iconify2-static"></iconify-icon>
 <iconify-icon icon="cil:paper-plane" width="36"></iconify-icon>
 
-## 自定义组件 CSS
+## Custom Component CSS
 
-默认使用 CSS 变量来管理样式。你可以通过覆盖根级 CSS 变量，轻松实现主题颜色及样式的个性化定制。
+By default, CSS variables are used to manage styles. You can easily customize theme colors and styles by overriding root-level CSS variables.
 
-### 在主题入口导入自定义变量文件
+### Import Custom Variable File in Theme Entry
 
 ```ts
 // .vitepress/theme/index.ts
 import DefaultTheme from 'vitepress/theme'
-import '@theojs/Lumen/style'
+import '@theojs/thevite/style'
 // [!code ++]
 import './var.css'
 
 export default DefaultTheme
 ```
 
-### 在 `var.css` 中覆盖变量
+### Override Variables in `var.css`
 
 ```css
 /* .vitepress/theme/var.css */
@@ -76,95 +76,95 @@ export default DefaultTheme
 }
 ```
 
-查看<Pill icon="unjs:theme-colors" name="默认组件 CSS 变量" link="https://github.com/s-theo/Lumen/blob/main/src/style/components-var.css" /> 文件中查看所有可用变量，方便针对性覆盖。
+View <Pill icon="unjs:theme-colors" name="Default Component CSS Variables" link="https://github.com/s-theo/thevite/blob/main/src/style/components-var.css" /> file to see all available variables for targeted overrides.
 
-## 内置样式示例
+## Built-in Style Examples
 
-### 1. 容器
+### 1. Containers
 
-容器用于显示信息提示、警告、注意事项等内容，支持多种内置类型：
+Containers are used to display informational tips, warnings, notices, and other content, supporting multiple built-in types:
 
-**输入**
+**Input**
 
 ```md
-> [这是一个链接](https://doc.theojs.cn/)
+> [This is a link](https://doc.theojs.cn/)
 >
-> 这是一段文字
+> This is some text
 
 ::: info
-[这是一个链接](https://doc.theojs.cn/)
+[This is a link](https://doc.theojs.cn/)
 
-这是一段文字
+This is some text
 :::
 
 ::: tip
-[这是一个链接](https://doc.theojs.cn/)
+[This is a link](https://doc.theojs.cn/)
 
-这是一段文字
+This is some text
 :::
 
 ::: warning
-[这是一个链接](https://doc.theojs.cn/)
+[This is a link](https://doc.theojs.cn/)
 
-这是一段文字
+This is some text
 :::
 
 ::: danger
-[这是一个链接](https://doc.theojs.cn/)
+[This is a link](https://doc.theojs.cn/)
 
-这是一段文字
+This is some text
 :::
 
 ::: details
-[这是一个链接](https://doc.theojs.cn/)
+[This is a link](https://doc.theojs.cn/)
 
-这是一段文字
+This is some text
 :::
 ```
 
-**输出**
+**Output**
 
-> [这是一个链接](https://doc.theojs.cn/)
+> [This is a link](https://doc.theojs.cn/)
 >
-> 这是一段文字
+> This is some text
 
 ::: info
-[这是一个链接](https://doc.theojs.cn/)
+[This is a link](https://doc.theojs.cn/)
 
-这是一段文字
+This is some text
 :::
 
 ::: tip
-[这是一个链接](https://doc.theojs.cn/)
+[This is a link](https://doc.theojs.cn/)
 
-这是一段文字
+This is some text
 :::
 
 ::: warning
-[这是一个链接](https://doc.theojs.cn/)
+[This is a link](https://doc.theojs.cn/)
 
-这是一段文字
+This is some text
 :::
 
 ::: danger
-[这是一个链接](https://doc.theojs.cn/)
+[This is a link](https://doc.theojs.cn/)
 
-这是一段文字
+This is some text
 :::
 
 ::: details
-[这是一个链接](https://doc.theojs.cn/)
+[This is a link](https://doc.theojs.cn/)
 
-这是一段文字
+This is some text
 :::
 
-### 2. 自定义容器
+### 2. Custom Containers
 
-**输入**
+**Input**
 
 ````md
 ::: danger STOP
-[这是一个链接](https://doc.theojs.cn/)
+[This is a link](https://doc.theojs.cn/)
 :::
 
 ::: details Click me to view the code
@@ -176,9 +176,9 @@ console.log('Hello, VitePress!')
 :::
 ````
 
-**输出**
+**Output**
 ::: danger STOP
-[这是一个链接](https://doc.theojs.cn/)
+[This is a link](https://doc.theojs.cn/)
 :::
 
 ::: details Click me to view the code
@@ -189,75 +189,75 @@ console.log('Hello, VitePress!')
 
 :::
 
-### 3. GitHub 风格容器
+### 3. GitHub Style Containers
 
-**输入**
+**Input**
 
 ```md
 > [!NOTE]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [This is a link](https://doc.theojs.cn/)
 >
-> 这是一段文字
+> This is a text paragraph
 
 > [!TIP]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [This is a link](https://doc.theojs.cn/)
 >
-> 这是一段文字
+> This is a text paragraph
 
 > [!IMPORTANT]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [This is a link](https://doc.theojs.cn/)
 >
-> 这是一段文字
+> This is a text paragraph
 
 > [!WARNING]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [This is a link](https://doc.theojs.cn/)
 >
-> 这是一段文字
+> This is a text paragraph
 
 > [!CAUTION]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [This is a link](https://doc.theojs.cn/)
 >
-> 这是一段文字
+> This is a text paragraph
 ```
 
-**输出**
+**Output**
 
 > [!NOTE]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [This is a link](https://doc.theojs.cn/)
 >
-> 这是一段文字
+> This is a text paragraph
 
 > [!TIP]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [This is a link](https://doc.theojs.cn/)
 >
-> 这是一段文字
+> This is a text paragraph
 
 > [!IMPORTANT]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [This is a link](https://doc.theojs.cn/)
 >
-> 这是一段文字
+> This is a text paragraph
 
 > [!WARNING]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [This is a link](https://doc.theojs.cn/)
 >
-> 这是一段文字
+> This is a text paragraph
 
 > [!CAUTION]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [This is a link](https://doc.theojs.cn/)
 >
-> 这是一段文字
+> This is a text paragraph
 
-### 4. Badge 组件
+### 4. Badge Component
 
 ```vue-html
 <Badge type="info" text="default" />
@@ -266,7 +266,7 @@ console.log('Hello, VitePress!')
 <Badge type="danger" text="caution" />
 <Badge type="info">custom element</Badge>
 
-<!-- 或者是 small-->
+<!-- or small-->
 <Badge type="info small" text="default" />
 <Badge type="tip small" text="^1.9.0" />
 <Badge type="warning small" text="beta" />
@@ -286,33 +286,33 @@ console.log('Hello, VitePress!')
 <Badge type="danger small" text="caution" />
 <Badge type="info small">custom element</Badge>
 
-### 5. 图片的浅色和深色模式支持
+### 5. Light and Dark Mode Support for Images
 
-**输入**
+**Input**
 
 ```md
-![浅色模式](https://i.theojs.cn/logo/github.svg){.light-only}
+![Light Mode](https://i.theojs.cn/logo/github.svg){.light-only}
 
-![深色模式](https://i.theojs.cn/logo/github-dark.svg){.dark-only}
+![Dark Mode](https://i.theojs.cn/logo/github-dark.svg){.dark-only}
 
-![深色模式](https://i.theojs.cn/logo/github-dark.svg#dark)
+![Dark Mode](https://i.theojs.cn/logo/github-dark.svg#dark)
 
-![浅色模式](https://i.theojs.cn/logo/github.svg#light)
+![Light Mode](https://i.theojs.cn/logo/github.svg#light)
 ```
 
-**输出**
+**Output**
 
-![浅色模式](https://i.theojs.cn/logo/github.svg){.light-only}
+![Light Mode](https://i.theojs.cn/logo/github.svg){.light-only}
 
-![深色模式](https://i.theojs.cn/logo/github-dark.svg){.dark-only}
+![Dark Mode](https://i.theojs.cn/logo/github-dark.svg){.dark-only}
 
-![深色模式](https://i.theojs.cn/logo/github-dark.svg#dark)
+![Dark Mode](https://i.theojs.cn/logo/github-dark.svg#dark)
 
-![浅色模式](https://i.theojs.cn/logo/github.svg#light)
+![Light Mode](https://i.theojs.cn/logo/github.svg#light)
 
-### 6. 首页 actions 添加图片
+### 6. Adding Images to Homepage Actions
 
-查看 [自定义组件 css](#自定义组件-css) 将下方的内容更换为自己的图片链接
+See [Custom Component CSS](#custom-component-css) to replace the content below with your own image links
 
 ```css [.vitepress/theme/var.css]
 :root {
@@ -347,13 +347,13 @@ features: ...
 ---
 ```
 
-## 解决方案
+## Solution
 
-### 导入主题时报错: `does not provide an export named 'load'`
+### Error when importing theme: `does not provide an export named 'load'`
 
-查看 [解决方式](./comment.md##安装依赖)
+See [Solution](./comment.md##install-dependencies)
 
-### 使用 `iconify-icon` 时报错: `[Vue warn]: Failed to resolve component: iconify-icon`
+### Error when using `iconify-icon`: `[Vue warn]: Failed to resolve component: iconify-icon`
 
 ```ts [.vitepress/config.mts]
 import { defineConfig } from 'vitepress'
@@ -370,7 +370,7 @@ export default defineConfig({
 })
 ```
 
-### 使用 [vitepress-plugin-image-viewer](https://www.npmjs.com/package/vitepress-plugin-image-viewer) 时排除组件内的图像
+### Excluding images within components when using [vitepress-plugin-image-viewer](https://www.npmjs.com/package/vitepress-plugin-image-viewer)
 
 ```ts [.vitepress/theme/index.ts]
 // [!code ++]
@@ -393,18 +393,18 @@ export default {
 }
 ```
 
-### 组件图像默认加载行为
+### Component Image Default Loading Behavior
 
-在组件中，图像默认使用 `loading="lazy"`，即图片会在接近视口时才开始加载，以优化页面加载速度和性能。
+In components, images use `loading="lazy"` by default, meaning images will only start loading when they approach the viewport, to optimize page loading speed and performance.
 
-**如果需要修改默认行为**
+**If you need to modify the default behavior**
 
-如果你希望图像在页面加载时立即加载，你可以显式地在组件中设置 `loading="eager"`。
+If you want images to load immediately when the page loads, you can explicitly set `loading="eager"` in the component.
 
 ```vue-html
 <Pill
   :image="{ src: 'https://www.example.com/image.jpg', loading: 'eager' }"
-  name="示例图片"
+  name="Example Image"
   link="https://www.example.com"
 />
 ```

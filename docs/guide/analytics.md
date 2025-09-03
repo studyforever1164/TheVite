@@ -1,18 +1,18 @@
 ---
 title: Site Analytics Component - Analytics
-description: 探索如何使用 @theojs/Lumen 插件，在你的 VitePress 站点中无缝集成谷歌分析 (Google Analytics)、百度统计 (Baidu Analytics) 及 Umami Analytics。本指南将帮助你快速配置和管理站点统计，有效追踪和分析网站数据。
+description: Explore how to use the @theojs/thevite plugin to seamlessly integrate Google Analytics, Baidu Analytics, and Umami Analytics into your VitePress site. This guide will help you quickly configure and manage site analytics to effectively track and analyze website data.
 ---
 
-# 站点统计组件
+# Site Analytics Component
 
-该插件集成了三种常见的站点统计工具：**谷歌分析 (Google Analytics)**、**百度统计 (Baidu Analytics)** 和 **Umami Analytics**，让你可以轻松地在 VitePress 网站中集成并管理这些分析工具。无论是谷歌分析的强大功能，还是百度统计对中国市场的适配，或者是 Umami 的隐私友好型方案，都可以通过这个插件快速集成并使用。
+This plugin integrates three common site analytics tools: **Google Analytics**, **Baidu Analytics**, and **Umami Analytics**, allowing you to easily integrate and manage these analytics tools in your VitePress website. Whether it's the powerful features of Google Analytics, Baidu Analytics' adaptation to the Chinese market, or Umami's privacy-friendly solution, they can all be quickly integrated and used through this plugin.
 
-## 谷歌分析 - googleAnalytics
+## Google Analytics - googleAnalytics
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
-import { googleAnalytics } from '@theojs/Lumen'
+import { googleAnalytics } from '@theojs/TheVite'
 
 export default {
   // [!code ++]
@@ -22,25 +22,25 @@ export default {
 }
 ```
 
-### 获取 Google Analytics ID
+### Get Google Analytics ID
 
-1. 访问<Pill icon="logos:google-analytics" name="Google Analytics" link="https://analytics.google.com/" />网站。
-2. 登录到你的 Google Analytics 帐号。
-3. 创建一个新的 Google Analytics 账户，或者选择已有的账户。
-4. 在左下角点击 `Admin`（管理）。
-5. 在 `Account`（账户）列下，选择你的账户。
-6. 在 `Property`（属性）列下，选择你的站点，或者创建一个新的站点。
-7. 在 `Property Settings`（属性设置）中，找到 `Tracking Info`（跟踪信息）。
-8. 点击 `Tracking Code`（跟踪代码），你会看到类似 `G-XXXXXXX` 的 ID。
+1. Visit <Pill icon="logos:google-analytics" name="Google Analytics" link="https://analytics.google.com/" /> website.
+2. Log in to your Google Analytics account.
+3. Create a new Google Analytics account, or select an existing account.
+4. Click `Admin` in the bottom left corner.
+5. Under the `Account` column, select your account.
+6. Under the `Property` column, select your site, or create a new site.
+7. In `Property Settings`, find `Tracking Info`.
+8. Click `Tracking Code`, and you will see an ID similar to `G-XXXXXXX`.
 
-**详细操作见官方文档：** <Pill icon="logos:google-analytics" name="Google Analytics 帮助文档" link="https://support.google.com/analytics/answer/9304153?hl=zh-Hans" />
+**For detailed operations, see the official documentation:** <Pill icon="logos:google-analytics" name="Google Analytics Help" link="https://support.google.com/analytics/answer/9304153?hl=en" />
 
-## 百度统计 - baiduAnalytics
+## Baidu Analytics - baiduAnalytics
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
-import { baiduAnalytics, trackPageview } from '@theojs/Lumen'
+import { baiduAnalytics, trackPageview } from '@theojs/thevite'
 
 export default {
   // [!code ++]
@@ -54,22 +54,22 @@ export default {
 }
 ```
 
-### 获取 Baidu Analytics ID
+### Get Baidu Analytics ID
 
-1. 访问 <Pill :icon="{ icon: 'ri:baidu-fill', color: '#2932E1' }" name="百度统计" link="https://tongji.baidu.com/" /> 网站。
-2. 使用百度账号登录或注册一个新账号。
-3. 登录后，点击页面上方的 `我的报告`-`使用设置`-`网站列表`。
-4. 添加你的网站，选择分类并保存
-5. 获取统计代码，复制链接中 `hm.js?******` 的 ID 部分。
+1. Visit <Pill :icon="{ icon: 'ri:baidu-fill', color: '#2932E1' }" name="Baidu Analytics" link="https://tongji.baidu.com/" /> website.
+2. Log in with your Baidu account or register a new account.
+3. After logging in, click `My Reports` - `Settings` - `Website List` at the top of the page.
+4. Add your website, select a category and save.
+5. Get the tracking code and copy the ID part from `hm.js?******` in the link.
 
-**详细操作见官方文档：** <Pill :icon="{ icon: 'ri:baidu-fill', color: '#2932E1' }" name="百度统计官方文档" link="https://tongji.baidu.com/web/help/article?id=175&type=0" />
+**For detailed operations, see the official documentation:** <Pill :icon="{ icon: 'ri:baidu-fill', color: '#2932E1' }" name="Baidu Analytics Official Documentation" link="https://tongji.baidu.com/web/help/article?id=175&type=0" />
 
 ## Umami - umamiAnalytics
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
-import { umamiAnalytics } from '@theojs/Lumen'
+import { umamiAnalytics } from '@theojs/TheVite'
 
 export default {
   // [!code ++]
@@ -78,25 +78,25 @@ export default {
     umamiAnalytics({
       id: '***-***-***-***', // [!code ++]
       src: 'https://*******', // [!code ++]
-      domains: 'your.domain.com' // [!code ++] 可选，参考官方配置 https://umami.is/docs/tracker-configuration#data-domains
+      domains: 'your.domain.com' // [!code ++] Optional, refer to official configuration https://umami.is/docs/tracker-configuration#data-domains
     }) // [!code ++]
   }
 }
 ```
 
-### 获取 Umami Analytics ID
+### Get Umami Analytics ID
 
-#### 自建 Umami
+#### Self-hosted Umami
 
-1. 参考 <Pill :icon="{ icon: 'simple-icons:umami', color: { light: '#000000', dark: '#ffffff' } }" name="Umami 文档" link="https://umami.is/docs/guides/hosting" /> 搭建 Umami 服务器。
-2. 登录 Umami 仪表盘，创建新站点。
-3. 复制该站点的 ID 用于配置。
+1. Refer to <Pill :icon="{ icon: 'simple-icons:umami', color: { light: '#000000', dark: '#ffffff' } }" name="Umami Documentation" link="https://umami.is/docs/guides/hosting" /> to set up an Umami server.
+2. Log in to the Umami dashboard and create a new site.
+3. Copy the site ID for configuration.
 
-#### 使用公共 Umami 服务
+#### Using Public Umami Service
 
-1. 使用第三方 Umami 公共实例。
-2. 获取公共实例分配的站点 ID。
+1. Use a third-party Umami public instance.
+2. Get the site ID assigned by the public instance.
 
-> 你的 Umami ID 应该类似于：`123abc456def`
+> Your Umami ID should look like: `123abc456def`
 
-**官方文档及资源：** <Pill :icon="{ icon: 'simple-icons:umami', color: { light: '#000000', dark: '#ffffff' } }" name="Umami 文档" link="https://umami.is/docs/guides/hosting" /> <Pill :icon="{ icon: 'simple-icons:umami', color: { light: '#000000', dark: '#ffffff' } }" name="Umami 公共服务" link="https://umami.is/" />
+**Official Documentation and Resources:** <Pill :icon="{ icon: 'simple-icons:umami', color: { light: '#000000', dark: '#ffffff' } }" name="Umami Documentation" link="https://umami.is/docs/guides/hosting" /> <Pill :icon="{ icon: 'simple-icons:umami', color: { light: '#000000', dark: '#ffffff' } }" name="Umami Public Service" link="https://umami.is/" />

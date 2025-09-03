@@ -8,7 +8,7 @@ hero:
   tagline: ✨ Theme beautification and Vue extension component library designed for VitePress
 
   image:
-    src: https://i.theojs.cn/logo/thevite-logo-large.svg
+    src: https://i.theojs.cn/logo/lumen-logo-large.svg
     alt: TheVite
     fetchpriority: high
 
@@ -28,7 +28,7 @@ hero:
 
     - theme: alt
       text: Github
-      link: https://doc.theojs.cn/serve/sharing/account-sharing-guide
+      link: https://github.com/studyforever1164/TheVite?tab=readme-ov-file
 
 features:
   - title: '<iconify-icon class="i-mr" icon="heroicons:puzzle-piece" style="color:#ff9800"></iconify-icon>Out-of-the-box Theme Colors'

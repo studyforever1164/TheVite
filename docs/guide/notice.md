@@ -1,17 +1,12 @@
 ---
 title: Homepage Notice Bar Component - Notice
-description: Learn how to use the @theojs/Lumen plugin to add an eye-catching notice bar component to your VitePress website homepage. Easily configure and display event information, important notifications or quick installation commands to effectively improve homepage interactivity and information delivery efficiency.
+description: Learn how to use the @theojs/TheVite plugin to add an eye-catching notice bar component to your VitePress website homepage. Easily configure and display event information, important notifications or quick installation commands to effectively improve homepage interactivity and information delivery efficiency.
 head:
-  - - meta
-    - property: og:image
-      content: https://i.theojs.cn/docs/announcement-light.webp
 ---
 
 # Homepage Notice Bar Component - Notice
 
-![Homepage Notice Bar - Preview|550x0](https://i.theojs.cn/docs/announcement-light.webp#light 'Homepage Notice Bar - Preview')
 
-![Homepage Notice Bar - Preview|550x0](https://i.theojs.cn/docs/announcement-dark.webp#dark 'Homepage Notice Bar - Preview')
 
 ## Import Component
 
@@ -20,7 +15,7 @@ import DefaultTheme from 'vitepress/theme'
 // [!code ++]
 import { h } from 'vue'
 // [!code ++]
-import { Notice } from '@theojs/Lumen'
+import { Notice } from '@theojs/TheVite'
 
 export default {
   extends: DefaultTheme,
@@ -35,36 +30,36 @@ export default {
 }
 ```
 
-## 配置公告栏
+## Configure Notice Bar
 
 ```yaml{4-12} [.vitepress/index.md]
 ---
 layout: home
 hero:
   Notice:
-    title: '🎉 活动不停歇，青云梯四周年双旦特惠'
-    desc: | # 支持 YAML 的换行符，保持多行格式
-      · 月/季/半年付 <span class="promo-text">85折: wuyi85</span>
-      · 年付以上 <span class="promo-text">64折: wuyi80</span>
-    date: '2025年1月7日23时59分'
+    title: '🎉 Endless Activities, QYT 4th Anniversary Christmas & New Year Special'
+    desc: | # Support YAML line breaks, maintain multi-line format
+      · Monthly/Quarterly/Half-yearly <span class="promo-text">15% off: wuyi85</span>
+      · Annual and above <span class="promo-text">36% off: wuyi80</span>
+    date: 'January 7, 2025 23:59'
     dateIcon: 'mdi:calendar-star'
-    dateText: '活动截止日期'
+    dateText: 'Activity Deadline'
     link: 'https://itheo.top/qyt'
 ---
 ```
 
-## 数据接口说明
+## Data Interface Description
 
-| 字段        | 类型         | 描述                                                                                                                                                                                             | 是否必填              |
-| ----------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------- |
-| `link`      | `LinkType`   | 链接地址，点击后跳转的目标 URL。                                                                                                                                                                 | <Badge text="可选" /> |
-| `rel`       | `RelType`    | 链接的 `rel` 属性，用于控制链接的安全性和行为，如防止新窗口跳转时的安全风险（`noopener`）、避免搜索引擎跟踪（`nofollow`）等。                                                                    | <Badge text="可选" /> |
-| `target`    | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。                                                           | <Badge text="可选" /> |
-| `title`     | `string`     | 链接显示的标题文本，突出展示的主要内容。                                                                                                                                                         | <Badge text="必填" /> |
-| `desc`      | `string`     | 链接下方的补充描述内容，可用于详细说明或附加信息。                                                                                                                                               | <Badge text="可选" /> |
-| `date`      | `string`     | 活动截止日期或相关时间信息，通常用于提示有效期限。                                                                                                                                               | <Badge text="可选" /> |
-| `dateText`  | `string`     | 活动时间的文字说明，默认为 `活动时间: 即日至`，可自定义显示文案。                                                                                                                                | <Badge text="可选" /> |
-| `dateIcon`  | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。与 `dateImage` 互斥。若 `dateIcon` 和 `dateImage` 都未定义，组件会显示默认图标 `'heroicons:calendar-days'`。详情查看 [IconType](#IconType) | <Badge text="可选" /> |
-| `dateImage` | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪。与 `dateIcon` 互斥。若 `dateIcon` 和 `dateImage` 都未定义，组件会显示默认图标 `'heroicons:calendar-days'`。详情查看 [ImageType](#ImageType)    | <Badge text="可选" /> |
+| Field       | Type         | Description                                                                                                    | Required               |
+| ----------- | ------------ | -------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| `link`      | `LinkType`   | Link address, target URL to jump to when clicked.                                                             | <Badge text="Optional" /> |
+| `rel`       | `RelType`    | The `rel` attribute of the link, used to control link security and behavior, such as preventing security risks when opening new windows (`noopener`) and avoiding search engine tracking (`nofollow`). | <Badge text="Optional" /> |
+| `target`    | `TargetType` | Link target window. Default is determined by link address: external links default to open in new tab (`_blank`), internal links have no default value (`open in current page`). Can be customized to override this behavior. | <Badge text="Optional" /> |
+| `title`     | `string`     | Title text displayed for the link, the main content to be highlighted.                                        | <Badge text="Required" /> |
+| `desc`      | `string`     | Supplementary description content below the link, can be used for detailed explanation or additional information. | <Badge text="Optional" /> |
+| `date`      | `string`     | Activity deadline or related time information, usually used to remind of validity period.                      | <Badge text="Optional" /> |
+| `dateText`  | `string`     | Text description for activity time, defaults to `Activity Time: From now until`, customizable display text.    | <Badge text="Optional" /> |
+| `dateIcon`  | `IconType`   | Icon configuration, supports string or object, supports light/dark mode and color configuration. Mutually exclusive with `dateImage`. If both `dateIcon` and `dateImage` are undefined, the component will display the default icon `'heroicons:calendar-days'`. For details see [IconType](#IconType) | <Badge text="Optional" /> |
+| `dateImage` | `ImageType`  | Image configuration, supports string or object, supports light/dark mode and cropping. Mutually exclusive with `dateIcon`. If both `dateIcon` and `dateImage` are undefined, the component will display the default icon `'heroicons:calendar-days'`. For details see [ImageType](#ImageType) | <Badge text="Optional" /> |
 
 <!--@include: ../demo/type.md-->

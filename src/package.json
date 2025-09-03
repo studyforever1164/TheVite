@@ -22,11 +22,11 @@
   ],
   "homepage": "https://Lumen.theojs.cn/",
   "bugs": {
-    "url": "https://github.com/s-theo/Lumen/issues"
+    "url": "https://github.com/studyforever1164/TheVite/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/s-theo/Lumen.git",
+    "url": "https://github.com/studyforever1164/TheVite.git",
     "directory": "src"
   },
   "license": "MIT",

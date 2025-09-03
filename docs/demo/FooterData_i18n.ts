@@ -11,11 +11,11 @@ export const Footer_Data: FooterData = {
             dark: 'fluent:globe-shield-48-filled',
             color: { light: 'rgba(20, 150, 255, 1)', dark: 'rgba(100, 200, 255, 1)' }
           },
-          number: '粤ICP备12345678号',
+          number: 'Guangdong ICP Filing 12345678',
           rel: 'noopener noreferrer'
         }
       }
-      // ...其他项省略
+      // ...other items omitted
     },
     en: {
       beian: {
@@ -30,7 +30,7 @@ export const Footer_Data: FooterData = {
           rel: 'noopener noreferrer'
         }
       }
-      // ...其他项省略
+      // ...other items omitted
     }
   }
 }

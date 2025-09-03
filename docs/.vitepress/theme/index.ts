@@ -12,9 +12,7 @@ export default {
   Layout() {
     return h(DefaultTheme.Layout, null, {
       'home-hero-info-before': () => h(lm.Notice),
-      'aside-ads-before': () => h(lm.Aside, { Aside_Data }),
-      'layout-bottom': () => h(lm.Footer, { Footer_Data }),
-      'doc-after': () => h(lm.Waline, { Waline_Data })
+      'aside-ads-before': () => h(lm.Aside, { Aside_Data })
     })
   },
   enhanceApp: ({ app }) => {

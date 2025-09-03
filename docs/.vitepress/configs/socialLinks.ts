@@ -5,7 +5,7 @@ import type { DefaultTheme } from 'vitepress'
 export const socialLinks: DefaultTheme.SocialLink[] = [
   {
     icon: 'github',
-    link: 'https://github.com/s-theo/thevite',
+    link: 'https://github.com/studyforever1164/TheVite',
     ariaLabel: 'Github'
   },
   {

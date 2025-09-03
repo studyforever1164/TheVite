@@ -11,7 +11,7 @@ export const Footer_Data: FooterData = {
         { name: 'Theo-Docs', link: 'https://github.com/s-theo/Theo-Docs' },
         { name: '玄学宝典', link: 'https://github.com/s-theo/xx.theojs.cn' },
         { name: '常用配置文件', link: 'https://github.com/s-theo/dotfiles' },
-        { name: 'Lumen', link: 'https://github.com/s-theo/Lumen' }
+        { name: 'Lumen', link: 'https://github.com/studyforever1164/TheVite' }
       ]
     },
     {

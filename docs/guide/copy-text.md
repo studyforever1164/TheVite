@@ -1,16 +1,16 @@
 ---
 title: Copy Button Component - CopyText
-description: 了解如何使用 @theojs/Lumen 的 CopyText 组件来实现点击复制文本功能。该组件支持自定义图标、提示信息和位置，适用于各种场景，如代码片段、链接等。
+description: Learn how to use the CopyText component from @theojs/TheVite to implement click-to-copy text functionality. This component supports custom icons, prompt messages, and positioning, suitable for various scenarios such as code snippets, links, etc.
 ---
 
-# 复制按钮组件 - CopyText
+# Copy Button Component - CopyText
 
-## 引入组件
+## Import Component
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
-import { CopyText } from '@theojs/Lumen'
+import { CopyText } from '@theojs/TheVite'
 
 export default {
   // [!code ++]
@@ -20,28 +20,28 @@ export default {
 }
 ```
 
-## 使用示例
+## Usage Example
 
-**输入**
+**Input**
 
 <<< ../demo/CopyText.vue{vue-html}
 
-**输出**
+**Output**
 
 <!--@include: ../demo/CopyText.vue-->
 
-## 数据接口说明
+## Data Interface Description
 
-|     字段     | 类型                                       | 说明                                                                                    | 是否必填              |
-| :----------: | ------------------------------------------ | --------------------------------------------------------------------------------------- | --------------------- |
-|    `type`    | `auto \| info \| tip \| warning \| danger` | 按钮颜色类型，默认值：`auto`                                                            | <Badge text="可选" /> |
-|   `label`    | `string`                                   | 按钮上显示的文本，未设置时默认显示 `text`                                               | <Badge text="可选" /> |
-|    `text`    | `string`                                   | 要复制的文本内容                                                                        | <Badge text="必填" /> |
-|  `toolTip`   | `string`                                   | 复制成功后显示的提示文本，默认值：`已复制`                                              | <Badge text="可选" /> |
-|   `noIcon`   | `boolean`                                  | 是否不显示图标，默认值：`false`                                                         | <Badge text="可选" /> |
-|    `icon`    | `IconType`                                 | 按钮的图标，默认值：`heroicons-outline:clipboard-copy` 。详情查看 [IconType](#IconType) | <Badge text="可选" /> |
-|   `image`    | `ImageType`                                | 按钮的图片 。详情查看 [ImageType](#ImageType)                                           | <Badge text="可选" /> |
-| `toolTipPos` | `top \| bottom \| left \| right`           | 提示显示的位置，默认值：`top`                                                           | <Badge text="可选" /> |
-|    `bold`    | `boolean`                                  | 是否启用加粗样式，启用时文字加粗 `font-weight: 600`，默认值：`false`                    | <Badge text="可选" /> |
+|    Field     | Type                                       | Description                                                                                                  | Required               |
+| :----------: | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ---------------------- |
+|    `type`    | `auto \| info \| tip \| warning \| danger` | Button color type, default: `auto`                                                                          | <Badge text="Optional" /> |
+|   `label`    | `string`                                   | Text displayed on the button, defaults to `text` when not set                                               | <Badge text="Optional" /> |
+|    `text`    | `string`                                   | Text content to be copied                                                                                    | <Badge text="Required" /> |
+|  `toolTip`   | `string`                                   | Prompt text displayed after successful copy, default: `Copied`                                              | <Badge text="Optional" /> |
+|   `noIcon`   | `boolean`                                  | Whether to hide the icon, default: `false`                                                                  | <Badge text="Optional" /> |
+|    `icon`    | `IconType`                                 | Button icon, default: `heroicons-outline:clipboard-copy`. For details see [IconType](#IconType)            | <Badge text="Optional" /> |
+|   `image`    | `ImageType`                                | Button image. For details see [ImageType](#ImageType)                                                       | <Badge text="Optional" /> |
+| `toolTipPos` | `top \| bottom \| left \| right`           | Position where the tooltip is displayed, default: `top`                                                     | <Badge text="Optional" /> |
+|    `bold`    | `boolean`                                  | Whether to enable bold style, when enabled text becomes bold `font-weight: 600`, default: `false`          | <Badge text="Optional" /> |
 
 <!--@include: ../demo/type.md-->

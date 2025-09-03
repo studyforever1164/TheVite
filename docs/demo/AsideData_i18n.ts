@@ -1,16 +1,16 @@
-import type { AsideItem } from '@theojs/Lumen'
+import type { AsideItem } from '@theojs/TheVite'
 
 export const Aside_Data: AsideItem = {
   i18n: {
     root: [
       {
         image: 'https://example.com/icon.webp',
-        promo: '活动标题',
-        info1: '简介1',
-        info2: '简介2',
+        promo: 'Event Title',
+        info1: 'Description 1',
+        info2: 'Description 2',
         link: 'https://example.com/'
       }
-      // ...其他项省略
+      // ...other items omitted
     ],
     en: [
       {
@@ -20,7 +20,7 @@ export const Aside_Data: AsideItem = {
         info2: 'Introduction 2',
         link: 'https://example.com/'
       }
-      // ...其他项省略
+      // ...other items omitted
     ]
   }
 }
