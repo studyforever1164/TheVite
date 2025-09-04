@@ -19,12 +19,12 @@
     />
   </p>
   <p>
-    <a href="https://thevite.org/">演示站点</a> |
-    <a href="https://thevite.org/guide/getting-started">查看文档</a>
+    <a href="https://thevite.org/">demo</a> |
+    <a href="https://thevite.org/guide/getting-started">document</a>
   </p>
 </div>
 
-## 安装
+## install
 
 ```sh [pnpm]
 pnpm add @theojs/TheVite
@@ -38,6 +38,6 @@ npm install @theojs/TheVite
 yarn add @theojs/TheVite
 ```
 
-## 赞助
+## sponsor
 
-<img src="https://i.theojs.cn/sponsor.webp" alt="Sponsors" />
+<img src="https://thevite.org/sponsor.webp" alt="Sponsors" />

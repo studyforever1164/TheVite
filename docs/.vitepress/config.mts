@@ -70,7 +70,7 @@ export default defineConfig({
 
     // Logo
     logo: {
-      src: 'https://i.theojs.cn/logo/thevite-logo-mini.svg',
+      src: 'https://i.theojs.cn/logo/lumen-logo-mini.svg',
       width: 24,
       height: 24,
       alt: 'TheVite',
